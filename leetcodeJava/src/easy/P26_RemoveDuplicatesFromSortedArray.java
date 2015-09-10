@@ -25,6 +25,7 @@ public class P26_RemoveDuplicatesFromSortedArray {
         return nums.length-count;
     }
     
+	  //two pointers
 //    public int removeDuplicates(int[] nums) {
 //        if(nums.length == 0 || nums.length == 1) return nums.length;
 //        int i=0, j=1;
@@ -39,8 +40,8 @@ public class P26_RemoveDuplicatesFromSortedArray {
 //        return ++i;
 //    }
 	public static void main(String[] args){
-	P26_RemoveDuplicatesFromSortedArray test = new P26_RemoveDuplicatesFromSortedArray();
-	int[] nums = new int[]{1,1,2};
-	System.out.println(test.removeDuplicates(nums));
+	    P26_RemoveDuplicatesFromSortedArray test = new P26_RemoveDuplicatesFromSortedArray();
+	    int[] nums = new int[]{1,1,2};
+	    System.out.println(test.removeDuplicates(nums));
 	}
 }
