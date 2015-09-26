@@ -26,9 +26,14 @@ public class meituanExample {
         return new String(str).substring(0, new_str_end-1);
     }
 	
+    static String division(String a, String b){
+    	return null;
+    }
+	
 	public static void main(String[] args){
-		meituanExample test = new meituanExample();
-		System.out.println(test.formatString(" I love    you  "));
-		System.out.println(test.formatString(" I love    you  ").length());
+		System.out.println(Math.ceil(2.1));
+//		meituanExample test = new meituanExample();
+//		System.out.println(test.formatString(" I love    you  "));
+//		System.out.println(test.formatString(" I love    you  ").length());
 	}
 }
