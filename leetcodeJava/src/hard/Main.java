@@ -1,41 +1,50 @@
 package hard;
 
-import java.util.*;
+class A{
+	public void f(){
+		System.out.println("A");
+	}
+}
+
+class B extends A{
+	public void f(){
+		System.out.println("B");
+	}
+	public void g(){
+		
+	}
+}
 
 public class Main {
-    public static void main(String[] args){
-    	Scanner scan = new Scanner(System.in);
-    	int p = scan.nextInt();
-    	int q = scan.nextInt();
-    	int l = scan.nextInt();
-    	int r = scan.nextInt();
-    	Set<Integer> set1 = new HashSet<Integer>();
-    	Set<Integer> set2 = new HashSet<Integer>();
-    	
-    	for(int i=0;i<p;i++){
-    		int a = scan.nextInt();
-    		int b = scan.nextInt();
-    		for(;a<=b;a++)
-    			set1.add(a);
+    public static void main(String[] args){ 
+    	int x = 1;
+    	int y = 2;
+    	swap1(x,y);
+    	swap2(x,y);
+    }
+    
+    static void swap1(int x, int y){
+    	System.out.println(x+","+y);
+    	x = x + y;
+    	y = x - y;
+    	x = x - y;
+    	System.out.println(x+","+y);
+    }
+    
+    static void swap2(int x, int y){
+    	System.out.println(x+","+y);
+    	x = x ^ y;
+    	y = x ^ y;
+    	x = x ^ y;
+    	System.out.println(x+","+y);
+    }
+    
+    static long getGCD(long a, long b){
+    	while(a % b != 0){
+    		long temp = a % b;
+    		a = b;
+    		b = temp;
     	}
-    	for(int i=0;i<q;i++){
-    		int c = scan.nextInt();
-    		int d = scan.nextInt();
-    		for(;c<=d;c++)
-    			set2.add(c);
-    	}
-    	int count = 0;
-    	for(int i = l;i<=r;i++){
-    		for(int s : set2){
-    			if(set1.contains(s+i)){
-    				count ++;
-    				break;
-    			}
-    		}
-    		
-    	}
-    	
-    	System.out.println(count);
-        scan.close();
+    	return b;
     }
 }
